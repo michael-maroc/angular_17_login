@@ -24,7 +24,7 @@ export class LoginComponent {
           alert('Login success!')
           this.router.navigateByUrl('/dashboard')
         } else {
-          alert('res.message')
+          alert(res.message)
         }
       })
    }
