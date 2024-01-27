@@ -22,6 +22,7 @@ export class LoginComponent {
       this.http.post('https://freeapi.miniprojectideas.com/api/User/Login', this.loginObj).subscribe((res:any) => {
         if (res.result) {
           alert('Login success!')
+          localStorage.setItem('angular17token', res.data.token)
           this.router.navigateByUrl('/dashboard')
         } else {
           alert(res.message)
